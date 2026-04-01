@@ -1,0 +1,53 @@
+AI Engineering Instructor Portfolio Website
+This document outlines the architecture, design token system, and execution steps for a premium, dynamic portfolio site customized for an engineer who teaches AI programming.
+
+User Review Required
+IMPORTANT
+
+The default theme will predominantly employ dark mode with deep navy/black backgrounds, accented with vibrant indigo and cyan gradients to symbolize "AI". The tech stack utilizes React (via Vite) and Pure Vanilla CSS (no Tailwind), as directed by web development guidelines. Please review and approve these choices before I begin execution.
+
+Proposed Changes
+Setup & Infrastructure
+Initialize the application: run npx -y create-vite@latest ./ --template react --no-interactive.
+Install necessary dependencies (lucide-react for beautiful icons, we will avoid other heavy UI libraries to stay close to pure native CSS rendering).
+Core Assets & Styling
+[NEW] src/index.css
+Implement root CSS variables for a modern color palette (e.g., deep charcoal, glowing cyan, and electric violet).
+Define reusable utility classes for glassmorphism (.glass-card), typography formatting, and gradient text (.text-gradient).
+Create smooth keyframe animations (e.g., floating elements, subtle glows, and fading text).
+[NEW] src/App.css
+Specific layout structures (global grid/flex layouts), max-widths for readability, and responsive media queries.
+Components
+[NEW] src/components/Navbar.jsx
+Fixed top sticky navigation bar using glassmorphism.
+Smooth scrolling link jump targets (Home, Projects, Teaching, Contact).
+[NEW] src/components/Hero.jsx
+A welcoming section introducing the user as both an AI Engineer and Educator.
+Animated dynamic background or floating elements (e.g. glowing nodes).
+Direct call-to-action buttons ("View Courses" & "See Projects").
+[NEW] src/components/Projects.jsx
+A grid of cards featuring past AI projects (RAG pipelines, Fine-tuned LLMs, Agents).
+Subtle card hover effects where borders glow in vibrant cyans to encourage interaction.
+[NEW] src/components/Teaching.jsx
+Section highlighting educational content (courses, tutorials, guides).
+Differentiated visual styling compared to standard projects.
+[NEW] src/components/Footer.jsx
+Contact info, social links (GitHub, YouTube, Twitter/X), and a clean newsletter CTA.
+Main Assembly
+[MODIFY] src/App.jsx
+Mount all respective sections (Navbar, Hero, Projects, Teaching, Footer).
+Ensure semantic HTML5 wrapper usage (<main>, <section>, <nav>).
+[MODIFY] index.html
+Inject best-practice SEO tags.
+Import standard Google Fonts (e.g., 'Inter' and 'Fira Code' for code snippets).
+Open Questions
+CAUTION
+
+Do you have a specific name and bio/tagline you'd like to use right now, or should I start with impressive placeholders that you can update later?
+What are the key social platforms you focus on for teaching? (e.g., YouTube, Substack, Udemy, etc.?)
+Verification Plan
+Automated Tests
+Run npm install and npm run build to verify the build process succeeds without errors.
+Manual Verification
+Start npm run dev and visually inspect elements to guarantee premium, WOW-factor aesthetics.
+Confirm presence of glassmorphism, responsive layout, and gradient hover states.
